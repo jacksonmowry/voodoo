@@ -1,0 +1,10 @@
+<div>@if todo.completed
+    @include 'check.html'
+    <span class="text-gray-400 line-through">@todo.task</span>
+    @else
+    @include 'finish.html'
+    <span class="">@todo.task</span>
+    @end</div>
+<div hx-swap-oob="true" id="item-count">
+    @count items left
+</div>

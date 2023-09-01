@@ -1,0 +1,22 @@
+<div hx-swap-oob="innerHTML" id="todo-list">
+    @for todo in todos
+    <div id="todo-item@todo.id" class="flex items-center justify-between group p-4">
+        <div hx-post="/complete/@todo.id" hx-swap="innerHTML" class="flex items-center gap-4">
+            @if todo.completed
+            @include 'check.html'
+            <span class="text-gray-400 line-through">@todo.task</span>
+            @else
+            @include 'finish.html'
+            <span class="">@todo.task</span>
+            @end
+        </div>
+        <div hx-delete="/delete/@todo.id" hx-swap="delete" hx-target="#todo-item@todo.id" class="group-hover:block hidden">
+            @include 'xmark.html'
+        </div>
+    </div>
+    <div id="sep@todo.id" class="border-b border-gray-300 last:hidden"></div>
+    @end
+</div>
+<div hx-swap-oob="true" id="item-count">
+    0 items left
+</div>
