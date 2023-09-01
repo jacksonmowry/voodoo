@@ -1,6 +1,8 @@
 # voodoo
 Todo website written in V, styled by Tailwindcss, and made possible by HTMX
 
+![Voodoo screenshot](voodoo.png)
+
 ## Link to Overview
 [Watch the overview](https://youtu.be/28wZe8ufwLQ)
 
